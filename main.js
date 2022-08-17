@@ -7,13 +7,13 @@ const reWriteTld = tld => {
 
 const handleKeyDown = e => {
   if (e.key === 'Enter') {
-    const url = `https://impervious.domains/name/${e.target.value}${settings.tld}/register/`;
+    const url = `https://impervious.domains/name/${e.target.value}${window.settings.tld}/register/`;
     location.href = url;
   };
 };
 
 const loadedHandler = () => {
-  reWriteTld(settings.tld);
+  reWriteTld(window.settings.tld);
 };
 
 (() => {
