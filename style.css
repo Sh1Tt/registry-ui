@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Rubik_Iso;
+  src: url(/font/Rubik_Iso/OFL.txt);
+}
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -98,6 +103,7 @@ html, body {
   width: 100%;
   background-color: #25293c;
   color: white;
+  font-family: 'Rubik_Iso';
 
 }
 
