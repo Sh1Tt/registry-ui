@@ -1,7 +1,4 @@
-@font-face {
-  font-family: Rubik_Iso;
-  src: url(font/Rubik_Iso/OFL.txt);
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -103,7 +100,7 @@ html, body {
   width: 100%;
   background-color: #25293c;
   color: white;
-  font-family: 'Rubik_Iso';
+  font-family: 'Rubik_Iso', cursive;
 
 }
 
