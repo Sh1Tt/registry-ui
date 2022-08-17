@@ -1,3 +1,5 @@
+window.settings = JSON.parse(settings);
+
 const reWriteTld = tld => {
   const allElements = Array.from(document.querySelectorAll(`[data-tld="true"]`));
   allElements.forEach(element => {
