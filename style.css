@@ -103,15 +103,6 @@ html, body {
 
 }
 
-header {
-  font-family: 'Rubik Iso', cursive;
-  font-size: 48px;
-}
-
-main {
-  font-family: 'Roboto Mono';
-}
-
 .search {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -260,7 +251,7 @@ input[type='checkbox'] {
   justify-content: center;
   align-items: center;
   font-size: 50px;
-  /*font-family: 'Roboto Mono';*/
+  font-family: 'Rubik Iso', cursive;
   color: white;
 }
 
@@ -271,7 +262,7 @@ input[type='checkbox'] {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  /*font-family: 'Roboto Mono';*/
+  font-family: 'Rubik Iso', cursive;
   opacity: 50%;
 }
 
@@ -281,7 +272,7 @@ input[type='checkbox'] {
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  /*font-family: 'Roboto Mono';*/
+  font-family: 'Rubik Iso', cursive;
   font-weight: 700;
   color: #ffffff;
   border: 2px solid #ffffff;
