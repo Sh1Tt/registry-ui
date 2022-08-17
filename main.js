@@ -1,11 +1,11 @@
-const handleKeyDown = e => {
-  if (e.key === 'Enter') {
-    const url = `https://impervious.domains/name/${e.target.value}${window.tld}/register/`;
+function keyDownHandler() {
+  if (event.key === 'Enter') {
+    const url = `https://impervious.domains/name/${event.target.value}${window.tld}/register/`;
     location.href = url;
   };
 };
 
-const loadedHandler = () => {
+function loadedHandler() {
   const allElements = Array.from(document.querySelectorAll(`[data-tld="true"]`));
   allElements.forEach(element => {
     const t = element.innerText;
