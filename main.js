@@ -10,7 +10,7 @@ const loadedHandler = () => {
   allElements.forEach(element => {
     const t = element.innerText;
     const r = t.replace("{{tld}}",window.tld);
-    console.log(t,r);
+    element.innerText = r;
   });
 };
 
