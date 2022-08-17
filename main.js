@@ -1,6 +1,7 @@
 function keyDownHandler() {
   if (event.key === 'Enter') {
     const url = `https://impervious.domains/name/${event.target.value}${window.tld}/register/`;
+    location.target = '_blanc';
     location.href = url;
   };
 };
