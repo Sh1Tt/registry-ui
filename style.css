@@ -108,6 +108,10 @@ header {
   font-size: 48px;
 }
 
+main {
+  font-family: 'system-ui';
+}
+
 .search {
   margin-top: 100px;
   margin-bottom: 100px;
