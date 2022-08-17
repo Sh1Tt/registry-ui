@@ -100,12 +100,12 @@ html, body {
   width: 100%;
   background-color: #25293c;
   color: white;
-  font-family: 'Rubik Iso', cursive;
-  font-size: 48px;
 
 }
 
-h1 {
+header {
+  font-family: 'Rubik Iso', cursive;
+  font-size: 48px;
 }
 
 .search {
