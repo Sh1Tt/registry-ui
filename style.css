@@ -101,7 +101,11 @@ html, body {
   background-color: #25293c;
   color: white;
   font-family: 'Rubik_Iso', cursive;
+  font-size: 48px;
 
+}
+
+h1 {
 }
 
 .search {
