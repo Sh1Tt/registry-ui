@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="{{.yourtld}} Domains" />
+    <meta property="og:title" content="{{tld}} Domains" />
     <meta property="og:image" content="/preview.png" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
-    <title>{{.yourtld}} Domains</title>
+    <title>{{tld}} Domains</title>
     <script src="script.js"></script>
-    <script src="search.js"></script>
-    <script src="biquad.js"></script>
-    <script src="/scroll.js" defer></script>
+    <!-- <script src="search.js"></script> -->
+    <!-- <script src="biquad.js"></script> -->
+    <!-- <script src="/scroll.js" defer></script> -->
   </head>
   <body>  
     <!-- <header> -->
-      <h1 class="title">
-        {{.yourtld}} Domains
+      <h1 data-tld="true" class="title">
+        {{tld}} Domains
       </h1>
       <div class="subtitle">Decentralized domains on Ethereum</div>
       <div class="subtitle">in a decentralized root zone</div>
@@ -25,13 +25,13 @@
     <!-- <main> -->
       <div class="search">
         <input type="text" class="searchbox"  placeholder="Enter domain" value="" onKeyDown="handleKeyDown()"></input> 
-        <div class="subtitle green">
-          {{.yourtld}}
+        <div data-tld="true" class="subtitle green">
+          {{tld}}
         </div>
       </div>
       <div class="wrap-collabsible">
         <input id="collapsible" class="toggle" type="checkbox"></input>
-        <label for="collapsible" class="lbl-toggle">How to access {{.yourtld}} sites</label>
+        <label for="collapsible" class="lbl-toggle">How to access {{tld}} sites</label>
         <div class="collapsible-content">
           <div class="content-inner">
             <div>
@@ -46,7 +46,7 @@
       <div class="wrap-collabsible">
         <input id="collapsible2" class="toggle" type="checkbox"></input>
         <label for="collapsible2" class="lbl-toggle">
-          How to set up {{.yourtld}} sites
+          How to set up {{tld}} sites
         </label>
         <div class="collapsible-content">
           <div class="content-inner">
