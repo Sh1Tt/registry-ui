@@ -1,7 +1,5 @@
-const settings = require("/settings.json");
-
 const reWriteTld = tld => {
-  const allElements = Array.from(document.querySelectorAll());
+  const allElements = Array.from(document.querySelectorAll(`[data-tld="true"]`));
   allElements.forEach(element => {
     console.log(element.innerText);
   })

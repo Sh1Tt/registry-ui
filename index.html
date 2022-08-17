@@ -7,11 +7,9 @@
     <meta property="og:image" content="/preview.png" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
-    <title>{{tld}} Domains</title>
-    <script src="script.js"></script>
-    <!-- <script src="search.js"></script> -->
-    <!-- <script src="biquad.js"></script> -->
-    <!-- <script src="/scroll.js" defer></script> -->
+    <title data-tld="true">{{tld}} Domains</title>
+    <script type="text/javascript" src="settings.json"></script>
+    <script type="module" src="main.js"></script>
   </head>
   <body>  
     <!-- <header> -->
@@ -31,7 +29,9 @@
       </div>
       <div class="wrap-collabsible">
         <input id="collapsible" class="toggle" type="checkbox"></input>
-        <label for="collapsible" class="lbl-toggle">How to access {{tld}} sites</label>
+        <label data-tld="true" for="collapsible" class="lbl-toggle">
+          How to access {{tld}} sites
+        </label>
         <div class="collapsible-content">
           <div class="content-inner">
             <div>
@@ -39,13 +39,14 @@
               (2) <a href="https://impervious.com/beacon">Beacon</a> Browser, 
               (3) <a href="https://hns.is/">Hns.is</a> Gateway,
               (4) <a href="https://github.com/handshake-org/hsd">HSD</a> Fullnode
-            </div><br/>
+            </div>
+            <br/>
           </div>
         </div>
       </div>
       <div class="wrap-collabsible">
         <input id="collapsible2" class="toggle" type="checkbox"></input>
-        <label for="collapsible2" class="lbl-toggle">
+        <label data-tld="true" for="collapsible2" class="lbl-toggle">
           How to set up {{tld}} sites
         </label>
         <div class="collapsible-content">
@@ -54,13 +55,17 @@
               (1) Handshake web hosting options include using a personal <a href="https://github.com/pinheadmz/handout">webserver</a>, <a href="https://www.instructables.com/Nginx-DANE-Hosting-on-Google-VM-for-Handshake/">NGINX + Google VM</a> or <a href="https://docs.ipfs.tech/how-to/websites-on-ipfs/link-a-domain/#handshake">IPFS</a>.<br/>
               <div>
                 then
-              </div><br/>
-              (2a) Connect your domain by adding name records directly on Ethereum<br/>
+              </div>
+              <br/>
+              (2a) Connect your domain by adding name records directly on Ethereum
+              <br/>
               <div>
                 or
-              </div><br/>
+              </div>
+              <br/>
               (2b) Point NS records to a <a href="https://hshub.io/">public</a> or <a href="https://github.com/pinheadmz/handout">self-hosted</a> nameserver to add records off-chain
-            </div><br/>
+            </div>
+            <br/>
           </div>
         </div>
       </div>
