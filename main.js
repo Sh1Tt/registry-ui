@@ -1,9 +1,9 @@
 const color = [
-  'darkgrey',
-  'blueviolet',
-  'cyan',
-  'hotpink',
-  'goldenrod'
+  'linear-gradient(7deg, transparent, black)',
+  'linear-gradient(7deg, blueviolet, purple)',
+  'linear-gradient(7deg, cyan, gold)',
+  'linear-gradient(7deg, hotpink, blue)',
+  'linear-gradient(7deg, goldenrod, yellow)'
 ];
 
 function keyDownHandler() {
@@ -15,7 +15,7 @@ function keyDownHandler() {
 };
 
 function updateHandler() {
-  card.style.background = color[Math.floor(Math.random()*5)]
+  card.style.background = color[Math.floor(Math.random()*color.length)];
 }
 
 function loadedHandler() {
