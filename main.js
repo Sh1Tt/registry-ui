@@ -31,6 +31,7 @@ function rewritePage() {
     const r = t.replace("{{tld}}",window.tld);
     element.innerText = r;
   });
+  document.body.querySelector(`#chat`).href = `https://hns.chat/#message:sh1tt`;
 };
 
 function keyDownHandler() {
