@@ -42,16 +42,14 @@ function setDomain(n) {
 };
 
 function updateHandler() {
-  if (input) {
-    console.log(input)
-    name = input.value;
-  };
-
+  name = event.target.value;
   randomizeColor();
-}
+};
 
 function loadedHandler() {
   rewritePage();
 };
 
-document.addEventListener("DOMContentLoaded", loadedHandler, false);
+document.addEventListener("DOMContentLoaded", 
+  loadedHandler
+, false);
