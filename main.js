@@ -36,6 +36,7 @@ function setDomain(n) {
 
 function updateHandler() {
   if (input) {
+    console.log(input)
     name = input.value;
   };
 
