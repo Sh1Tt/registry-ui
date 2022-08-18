@@ -8,40 +8,6 @@ const options = {
   ]
 };
 
-function randomizeColor() {
-  const randomGradient = options.color[Math.floor(Math.random()*options.color.length)];
-  card.style.background = randomGradient;
-};
-
-function rewritePage() {
-  const allElements = Array.from(document.querySelectorAll(`[data-tld="true"]`));
-  allElements.forEach(element => {
-    const t = element.innerText;
-    const r = t.replace("{{tld}}",window.tld);
-    element.innerText = r;
-  });
-};
-
-function keyDownHandler() {
-  if (event.key === 'Enter') {
-    const url = `https://impervious.domains/name/${event.target.value}${window.tld}/register/`;
-    location.target = '_blanc';
-    location.href = url;
-  };
-};
-
-function setDomain(n) {
-  showcase.innerText = n;
-};
-
-function updateHandler() {
-  if (input) {
-    console.log(input)
-    name = input.value;
-  };
-
-  randomizeColor();
-}
 
 function loadedHandler() {
   let name;
@@ -51,6 +17,41 @@ function loadedHandler() {
   
   const showcase = document.body.querySelector(`[data-std="domainname"]`);
 
+  function randomizeColor() {
+    const randomGradient = options.color[Math.floor(Math.random()*options.color.length)];
+    card.style.background = randomGradient;
+  };
+
+  function rewritePage() {
+    const allElements = Array.from(document.querySelectorAll(`[data-tld="true"]`));
+    allElements.forEach(element => {
+      const t = element.innerText;
+      const r = t.replace("{{tld}}",window.tld);
+      element.innerText = r;
+    });
+  };
+
+  function keyDownHandler() {
+    if (event.key === 'Enter') {
+      const url = `https://impervious.domains/name/${event.target.value}${window.tld}/register/`;
+      location.target = '_blanc';
+      location.href = url;
+    };
+  };
+
+  function setDomain(n) {
+    showcase.innerText = n;
+  };
+
+  function updateHandler() {
+    if (input) {
+      console.log(input)
+      name = input.value;
+    };
+
+    randomizeColor();
+  }
+  
   rewritePage();
 };
 
