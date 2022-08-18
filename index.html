@@ -23,9 +23,10 @@
     <main>
       <div class="search">
         <div id="card" class="domain flashy" style="width: 316px; height: 316px; display: flex; justify-content: center; align-items: center; background: darkgrey; border-radius: 1em; margin: 1em 0px 2em;">
-          <h2 data-tld="true" style="font-size: 143%;">
-            <span data-std="domainname"></span>{{tld}}
-          </h2>
+          <span>
+            <h2 data-std="domainname" style="font-size: 143%;"></h2>
+            <h2 data-tld style="font-size: 143%;">{{tld}}</h2>
+          </span>
         </div>
         <span>
           <input id="domainname" type="text" class="searchbox" placeholder="Enter domain" value="" onchange="updateHandler()" onkeyup="{e => { updateHandler(e) }}" onkeydown="keyDownHandler()"> 
