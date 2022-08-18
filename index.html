@@ -54,14 +54,14 @@
       }
 
       function loadedHandler() {
-        setTLD();
-        const settings = window.options;
         const card = document.body.querySelector(`#card`);
         const input = document.body.querySelector(`#domainname`);
         const showcase = document.body.querySelector(`[data-std="domainname"]`);
+        setTLD();
       };
 
       (() => {
+        const settings = window.options;
         document.addEventListener("DOMContentLoaded", loadedHandler, false);
       })();
     </script>
