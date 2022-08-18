@@ -43,6 +43,7 @@ function setDomain(n) {
 
 function updateHandler() {
   name = event.target.value;
+  setDomain(name);
   randomizeColor();
 };
 
