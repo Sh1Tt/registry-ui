@@ -50,7 +50,7 @@ function setDomain(n) {
 };
 
 function updateHandler() {
-  name = event.target.value;
+  name = event.target.value + window.tld;
   setDomain(name);
   randomizeColor();
 };
