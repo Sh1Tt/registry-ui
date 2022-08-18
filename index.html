@@ -22,12 +22,14 @@
     </header>
     <main>
       <div class="search">
-        <div id="show" class="card domain flashy"></div>
+        <div id="card" class="domain flashy" style="width: 316px; height: 316px; display: flex; justify-content: center; align-items: center; background: darkgrey; border-radius: 1em; margin: 1em 0px 2em;">
+          <h2 data-tld="true" style="font-size: 143%;">
+            <span data-std="domainname"></span>{{tld}}
+          </h2>
+        </div>
         <span>
-          <input type="text" class="searchbox"  placeholder="Enter domain" value="" onchange="updateHandler()" onKeyDown="keyDownHandler()"></input> 
-          <div data-tld="true" class="subtitle green">
-            {{tld}}
-          </div>
+          <input type="text" class="searchbox" placeholder="Enter domain" value="" onchange="updateHandler()" onkeyup="updateHandler()" onkeydown="keyDownHandler()" id="domainname"> 
+          <div data-tld="true" class="subtitle green">{{tld}}</div>
         </span>
       </div>
       <div class="wrap-collabsible">
