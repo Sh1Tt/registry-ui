@@ -17,7 +17,11 @@ const showcase = document.body.querySelector(`[data-std="domainname"]`);
 
 function randomizeColor() {
   const randomGradient = options.color[Math.floor(Math.random()*options.color.length)];
+  card.classList.add("fader");
   card.style.background = randomGradient;
+  setTimeout(() => {
+    card.classList.remove("fader");
+  }, 400);
 };
 
 function rewritePage() {

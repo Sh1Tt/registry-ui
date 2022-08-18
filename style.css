@@ -371,3 +371,21 @@ footer a:hover {
   }
   
 }
+
+.fader {
+  animation: .4s fade-card-01 ease-in-out forwards 1;
+}
+
+/*ANIMATIONS*/
+
+@KEYFRAMES fade-card-01 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
