@@ -35,8 +35,8 @@ function setDomain(n) {
 };
 
 function updateHandler() {
-  name = input.value;
-  setDomain(name);
+  // name = input.value;
+  // setDomain(name);
   randomizeColor();
 }
 
