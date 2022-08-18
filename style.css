@@ -361,6 +361,22 @@ footer a:hover {
   transition: all 1s ease;
 }
 
+footer #contact {
+  position: fixed;
+  bottom: 5%;
+  right: 2.5em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer #chat {
+  paddig: 1em 2em;
+  border-radius: .05em;
+  background-color: rgba(0,0,0,.45);
+}
+
 @media (min-width: 320px) and (max-width: 1000px) {
 
   .subsubtitle, .searchbox {
