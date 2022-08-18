@@ -22,7 +22,8 @@
     </header>
     <main>
       <div class="search">
-        <input type="text" class="searchbox"  placeholder="Enter domain" value="" onKeyDown="keyDownHandler()"></input> 
+        <div id="show" class="card domain flashy"></div>
+        <input type="text" class="searchbox"  placeholder="Enter domain" value="" onchange="updateHandler()" onKeyDown="keyDownHandler()"></input> 
         <div data-tld="true" class="subtitle green">
           {{tld}}
         </div>
@@ -52,7 +53,8 @@
         <div class="collapsible-content">
           <div class="content-inner">
             <div>
-              (1) Handshake web hosting options include using a personal <a href="https://github.com/pinheadmz/handout">webserver</a>, <a href="https://www.instructables.com/Nginx-DANE-Hosting-on-Google-VM-for-Handshake/">NGINX + Google VM</a> or <a href="https://docs.ipfs.tech/how-to/websites-on-ipfs/link-a-domain/#handshake">IPFS</a>.<br/>
+              (1) Handshake web hosting options include using a personal <a href="https://github.com/pinheadmz/handout">webserver</a>, <a href="https://www.instructables.com/Nginx-DANE-Hosting-on-Google-VM-for-Handshake/">NGINX + Google VM</a> or <a href="https://docs.ipfs.tech/how-to/websites-on-ipfs/link-a-domain/#handshake">IPFS</a>.
+              <br/>
               <div>
                 then
               </div>
