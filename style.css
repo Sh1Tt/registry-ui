@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
 
+:root {
+  --theme-green: #00ffb3;
+}
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -95,7 +99,10 @@ input, select {
     vertical-align:middle;
 }
 
-/* TheShake Stylesheet */
+
+/* ############################################################################################ */
+/* # TheShake Stylesheet                                                                      # */
+/* ############################################################################################ */
 
 html, body {
   height: 100%;
@@ -124,18 +131,19 @@ html, body {
   font-size: 14px;
   font-family: 'Roboto Mono';
   font-weight: 700;
-  color: #00ffb3;
-  border: 2px solid #00ffb3;
+  color: var(--theme-green);
+  border: 2px solid var(--theme-green);
   border-radius: 15px;
   background-color: #00ffb350;
   padding: 5px 7px 5px 7px;
   width: 25%;
   outline: 0;
   text-align: center;
+  flex: 1 1;
 }
 
 input::placeholder {
-    color: #00ffb3;
+    color: var(--theme-green);
 }
 
 
@@ -225,7 +233,7 @@ input[type='checkbox'] {
 
 .collapsible-content a {
   text-decoration: none;
-  color: #00ffb3;
+  color: var(--theme-green);
 }
 
 .collapsible-content a:hover {
@@ -296,7 +304,7 @@ input[type='checkbox'] {
 }
 
 .green {
-  color: #00ffb3;
+  color: var(--theme-green);
   opacity: 100%;
 }
 
@@ -325,7 +333,7 @@ footer {
 }
 
 footer a {
-  color: #00ffb3;
+  color: var(--theme-green);
   text-decoration: none;
   margin-left: 10px;
 }
