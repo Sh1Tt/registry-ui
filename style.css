@@ -142,6 +142,7 @@ html, body {
   border-radius: 1em;
   margin: 1em 0px 2em;
   backdrop-filter: drop-shadow(black 2px 4px 6px);
+  overflow: hidden;
 }
 
 .searchbox {
