@@ -50,5 +50,6 @@ function loadedHandler() {
 };
 
 (() => {
+  let name;
   document.addEventListener("DOMContentLoaded", loadedHandler, false);
 })();
