@@ -28,8 +28,8 @@
           </h2>
         </div>
         <span>
-          <input type="text" class="searchbox" placeholder="Enter domain" value="" onchange="updateHandler()" onkeyup="updateHandler()" onkeydown="keyDownHandler()" id="domainname"> 
-          <!-- <div data-tld="true" class="subtitle green">{{tld}}</div> -->
+          <input id="domainname" type="text" class="searchbox" placeholder="Enter domain" value="" onchange="updateHandler()" onkeyup="{e => { updateHandler(e) }}" onkeydown="keyDownHandler()"> 
+          <div data-tld="true" class="subtitle green">{{tld}}</div>
         </span>
       </div>
       <div class="wrap-collabsible">
