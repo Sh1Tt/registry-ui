@@ -8,7 +8,7 @@ window.options = {
   ]
 };
 
-(() => {
+// (() => {
   const settings = window.options;
   
   let name;
@@ -53,4 +53,4 @@ window.options = {
   };
 
   document.addEventListener("DOMContentLoaded", loadedHandler, false);
-})();
+// })();
