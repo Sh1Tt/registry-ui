@@ -7,13 +7,13 @@
     <meta property="og:image" content="/preview.png" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
-    <title data-tld="true">{{tld}} Domains</title>
+    <title data-tld>{{tld}} Domains</title>
     <script type="module" src="tld.js"></script>
     <script type="module" src="main.js"></script>
   </head>
   <body>  
     <header>
-      <h1 data-tld="true" class="title">
+      <h1 data-tld class="title">
         {{tld}} Domains
       </h1>
       <div class="subtitle">Decentralized domains on Ethereum</div>
@@ -29,12 +29,12 @@
         </div>
         <span>
           <input id="domainname" type="text" class="searchbox" placeholder="Enter domain" value="" onchange="updateHandler()" onkeyup="updateHandler()" onkeydown="keyDownHandler()"> 
-          <div data-tld="true" class="subtitle green">{{tld}}</div>
+          <div data-tld class="subtitle green">{{tld}}</div>
         </span>
       </div>
       <div class="wrap-collabsible">
         <input id="collapsible" class="toggle" type="checkbox"></input>
-        <label data-tld="true" for="collapsible" class="lbl-toggle">
+        <label data-tld for="collapsible" class="lbl-toggle">
           How to access {{tld}} sites
         </label>
         <div class="collapsible-content">
@@ -51,7 +51,7 @@
       </div>
       <div class="wrap-collabsible">
         <input id="collapsible2" class="toggle" type="checkbox"></input>
-        <label data-tld="true" for="collapsible2" class="lbl-toggle">
+        <label data-tld for="collapsible2" class="lbl-toggle">
           How to set up {{tld}} sites
         </label>
         <div class="collapsible-content">

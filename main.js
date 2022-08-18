@@ -23,7 +23,7 @@ function loadedHandler() {
   };
 
   function rewritePage() {
-    const allElements = Array.from(document.querySelectorAll(`[data-tld="true"]`));
+    const allElements = Array.from(document.querySelectorAll(`[data-tld]`));
     allElements.forEach(element => {
       const t = element.innerText;
       const r = t.replace("{{tld}}",window.tld);
