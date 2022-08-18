@@ -132,6 +132,18 @@ html, body {
   flex-direction: row;
 }
 
+#card {
+  width: 316px;
+  height: 316px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(7deg, cyan, gold);
+  border-radius: 1em;
+  margin: 1em 0px 2em;
+  backdrop-filter: drop-shadow(black 2px 4px 6px);
+}
+
 .searchbox {
   font-size: 14px;
   font-family: 'Roboto Mono';
