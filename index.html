@@ -23,10 +23,12 @@
     <main>
       <div class="search">
         <div id="show" class="card domain flashy"></div>
-        <input type="text" class="searchbox"  placeholder="Enter domain" value="" onchange="updateHandler()" onKeyDown="keyDownHandler()"></input> 
-        <div data-tld="true" class="subtitle green">
-          {{tld}}
-        </div>
+        <span>
+          <input type="text" class="searchbox"  placeholder="Enter domain" value="" onchange="updateHandler()" onKeyDown="keyDownHandler()"></input> 
+          <div data-tld="true" class="subtitle green">
+            {{tld}}
+          </div>
+        </span>
       </div>
       <div class="wrap-collabsible">
         <input id="collapsible" class="toggle" type="checkbox"></input>
