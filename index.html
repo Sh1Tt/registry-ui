@@ -7,13 +7,68 @@
     <meta property="og:image" content="/preview.png" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
-    <title data-tld="true">{{tld}} Domains</title>
+    <title data-tld>{{tld}} Domains</title>
     <script type="module" src="tld.js"></script>
-    <script type="module" src="main.js"></script>
+    <!-- <script type="module" src="main.js"></script> -->
+    <script>
+      window.options = {
+        color: [
+          'linear-gradient(7deg, transparent, black)',
+          'linear-gradient(7deg, blueviolet, purple)',
+          'linear-gradient(7deg, cyan, gold)',
+          'linear-gradient(7deg, rgb(100,80,146), rgb(200,160,255), rgba(100,27,245) 52%)',
+          'linear-gradient(205deg, goldenrod 2%, rgb(255,52,255), rgb(55,152,255))'
+        ]
+      };
+
+      function randomizeColor() {
+        const randomGradient = settings.color[Math.floor(Math.random()*settings.color.length)];
+        card.style.background = randomGradient;
+      };
+
+      function setTLD() {
+        const allElements = Array.from(document.querySelectorAll(`[data-tld]`));
+        allElements.forEach(element => {
+          const t = element.innerText;
+          const r = t.replace("{{tld}}",window.tld);
+          element.innerText = r;
+        });
+      };
+
+      function keyDownHandler() {
+        if (event.key === 'Enter') {
+          const url = `https://impervious.domains/name/${event.target.value}${window.tld}/register/`;
+          location.target = '_blanc';
+          location.href = url;
+        };
+      };
+
+      function setDomain(n) {
+        showcase.innerText = n;
+      };
+
+      function updateHandler() {
+        name = input.value;
+        setDomain(name);
+        randomizeColor();
+      }
+
+      function loadedHandler() {
+        setTLD();
+        const settings = window.options;
+        const card = document.body.querySelector(`#card`);
+        const input = document.body.querySelector(`#domainname`);
+        const showcase = document.body.querySelector(`[data-std="domainname"]`);
+      };
+
+      (() => {
+        document.addEventListener("DOMContentLoaded", loadedHandler, false);
+      })();
+    </script>
   </head>
   <body>  
     <header>
-      <h1 data-tld="true" class="title">
+      <h1 data-tld class="title">
         {{tld}} Domains
       </h1>
       <div class="subtitle">Decentralized domains on Ethereum</div>
@@ -23,18 +78,18 @@
     <main>
       <div class="search">
         <div id="card" class="domain flashy" style="width: 316px; height: 316px; display: flex; justify-content: center; align-items: center; background: darkgrey; border-radius: 1em; margin: 1em 0px 2em;">
-          <h2 data-tld="true" style="font-size: 143%;">
+          <h2 data-tld style="font-size: 143%;">
             <span data-std="domainname"></span>{{tld}}
           </h2>
         </div>
         <span>
           <input type="text" class="searchbox" placeholder="Enter domain" value="" onchange="updateHandler()" onkeyup="updateHandler()" onkeydown="keyDownHandler()" id="domainname"> 
-          <!-- <div data-tld="true" class="subtitle green">{{tld}}</div> -->
+          <!-- <div data-tld class="subtitle green">{{tld}}</div> -->
         </span>
       </div>
       <div class="wrap-collabsible">
         <input id="collapsible" class="toggle" type="checkbox"></input>
-        <label data-tld="true" for="collapsible" class="lbl-toggle">
+        <label data-tld for="collapsible" class="lbl-toggle">
           How to access {{tld}} sites
         </label>
         <div class="collapsible-content">
@@ -51,7 +106,7 @@
       </div>
       <div class="wrap-collabsible">
         <input id="collapsible2" class="toggle" type="checkbox"></input>
-        <label data-tld="true" for="collapsible2" class="lbl-toggle">
+        <label data-tld for="collapsible2" class="lbl-toggle">
           How to set up {{tld}} sites
         </label>
         <div class="collapsible-content">
