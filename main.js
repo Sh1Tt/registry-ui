@@ -1,10 +1,28 @@
-const color = [
-  'linear-gradient(7deg, transparent, black)',
-  'linear-gradient(7deg, blueviolet, purple)',
-  'linear-gradient(7deg, cyan, gold)',
-  'linear-gradient(7deg, hotpink, blue)',
-  'linear-gradient(7deg, goldenrod, yellow)'
-];
+window.options = {
+  color: [
+    'linear-gradient(7deg, transparent, black)',
+    'linear-gradient(7deg, blueviolet, purple)',
+    'linear-gradient(7deg, cyan, gold)',
+    'linear-gradient(7deg, rgb(100,80,146), rgb(200,160,255), rgba(100,27,245) 52%)',
+    'linear-gradient(205deg, goldenrod 2%, rgb(255,52,255), rgb(55,152,255))'
+  ]
+};
+
+const settings = window.options;
+
+function randomizeColor() {
+  const randomGradient = settings.color[Math.floor(Math.random()*settings.color.length)];
+  card.style.background = randomGradient;
+};
+
+function setTLD() {
+  const allElements = Array.from(document.querySelectorAll(`[data-tld]`));
+  allElements.forEach(element => {
+    const t = element.innerText;
+    const r = t.replace("{{tld}}",window.tld);
+    element.innerText = r;
+  });
+};
 
 function keyDownHandler() {
   if (event.key === 'Enter') {
@@ -14,19 +32,21 @@ function keyDownHandler() {
   };
 };
 
+function setDomain(n) {
+  showcase.innerText = n;
+};
+
 function updateHandler() {
-  card.style.background = color[Math.floor(Math.random()*color.length)];
+  name = input.value;
+  setDomain(name);
+  randomizeColor();
 }
 
 function loadedHandler() {
   const card = document.body.querySelector(`#card`);
-
-  const allElements = Array.from(document.querySelectorAll(`[data-tld="true"]`));
-  allElements.forEach(element => {
-    const t = element.innerText;
-    const r = t.replace("{{tld}}",window.tld);
-    element.innerText = r;
-  });
+  const input = document.body.querySelector(`#domainname`);
+  const showcase = document.body.querySelector(`[data-std="domainname"]`);
+  setTLD();
 };
 
 (() => {
