@@ -50,7 +50,9 @@
       };
 
       function updateHandler() {
-        name = input.value;
+        if (input) {
+          name = input.value;
+        };
         setDomain(name);
         randomizeColor();
       }
