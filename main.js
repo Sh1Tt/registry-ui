@@ -34,9 +34,11 @@ function setDomain(n) {
   showcase.innerText = n;
 };
 
-function updateHandler(e) {
-  // name = input.value;
-  setDomain(e.target.value);
+function updateHandler() {
+  if (input) {
+    name = input.value;
+  };
+
   randomizeColor();
 }
 
