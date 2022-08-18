@@ -1,15 +1,14 @@
-const options = {
-  color: [
-    'linear-gradient(7deg, transparent, black)',
-    'linear-gradient(7deg, blueviolet, purple)',
-    'linear-gradient(7deg, cyan, gold)',
-    'linear-gradient(7deg, rgb(100,80,146), rgb(200,160,255), rgba(100,27,245) 52%)',
-    'linear-gradient(205deg, goldenrod 2%, rgb(255,52,255), rgb(55,152,255))'
-  ]
-};
+(() => {
+  const options = {
+    color: [
+      'linear-gradient(7deg, transparent, black)',
+      'linear-gradient(7deg, blueviolet, purple)',
+      'linear-gradient(7deg, cyan, gold)',
+      'linear-gradient(7deg, rgb(100,80,146), rgb(200,160,255), rgba(100,27,245) 52%)',
+      'linear-gradient(205deg, goldenrod 2%, rgb(255,52,255), rgb(55,152,255))'
+    ]
+  };
 
-
-function loadedHandler() {
   let name;
 
   const card = document.body.querySelector(`#card`);
@@ -52,9 +51,9 @@ function loadedHandler() {
     randomizeColor();
   }
   
-  rewritePage();
-};
+  function loadedHandler() {
+    rewritePage();
+  };
 
-(() => {
   document.addEventListener("DOMContentLoaded", loadedHandler, false);
 })();
