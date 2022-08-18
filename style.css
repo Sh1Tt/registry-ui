@@ -372,7 +372,7 @@ footer #contact {
 }
 
 footer #chat {
-  paddig: 1em 2em;
+  padding: .75em 1.5em;
   border-radius: .05em;
   background-color: rgba(0,0,0,.45);
 }
