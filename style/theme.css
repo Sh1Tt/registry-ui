@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
 
 :root {
@@ -6,7 +7,8 @@
   --theme-font-secondary: 'Monofett', cursive;
   --theme-color-main: #00ffb3;
   --theme-color-secondary: rgba(246,238,255,1);
-  --theme-background-highlite: #00ffb350;
-  --theme-background-secondary: rgba(246,238,255,1);
+  --theme-bg-main: #25293c;
+  --theme-bg-highlite: #00ffb350;
+  --theme-bg-contrast: rgba(246,238,255,1);
 
 }
