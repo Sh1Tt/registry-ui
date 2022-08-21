@@ -4,7 +4,7 @@ const card = document.body.querySelector(`#card`);
 const input = document.body.querySelector(`#domainname`);
 const showcase = document.body.querySelector(`[data-std="domainname"]`);
 
-const chatLink = `https://hns.chat/#message:${options.chatname}`;
+const chatLink = `https://hns.chat/#message:${options.support.chatname}`;
 
 function randomizeColor() {
   const randomGradient = options.color[Math.floor(Math.random()*options.color.length)];

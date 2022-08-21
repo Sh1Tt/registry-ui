@@ -4,12 +4,12 @@
     <style type="text/css">html,body{background:black};</style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="{{tld}} Domains" />
+    <meta property="og:title" content="Handshake Domain market on Ethereum" />
     <meta property="og:image" content="/preview.png" />
     <link href="style/reset.css" rel="stylesheet" type="text/css" />
     <link href="style/theme.css" rel="stylesheet" type="text/css" />
     <link href="style/home.css" rel="stylesheet" type="text/css" />
-    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'> -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <meta name="theme-color" content="#00ffb3">
     <title data-tld>{{tld}} Domains</title>
@@ -91,60 +91,7 @@
       </div>
     </footer>
 
-    <script type="module" src="options.js"></script>
-    <script>
-      const options = window.options;
-      
-      const chatLink = `https://hns.chat/#message:${options.support.chatname}`;
-
-      const card = document.body.querySelector(`#card`);
-      const input = document.body.querySelector(`#domainname`);
-      const showcase = document.body.querySelector(`[data-std="domainname"]`);
-
-      function randomizeColor() {
-        const randomGradient = options.color[Math.floor(Math.random()*options.color.length)];
-        card.classList.add("fader");
-        card.style.background = randomGradient;
-        setTimeout(() => {
-          card.classList.remove("fader");
-        }, 400);
-      };
-
-      function rewritePage() {
-        const allElements = Array.from(document.querySelectorAll(`[data-tld]`));
-        allElements.forEach(element => {
-          const t = element.innerText;
-          const r = t.replace("{{tld}}",options.tld);
-          element.innerText = r;
-        });
-        document.body.querySelector(`#chat`).href = chatLink;
-      };
-
-      function keydownHandler() {
-        if (event.key === 'Enter') {
-          const url = `https://impervious.domains/name/${event.target.value}${options.tld}/register/`;
-          location.target = '_blanc';
-          location.href = url;
-        };
-      };
-
-      function setDomain(n) {
-        showcase.innerText = n;
-      };
-
-      function updateHandler() {
-        const domain = event.target.value + options.tld;
-        setDomain(domain);
-        randomizeColor();
-      };
-
-      function loadedHandler() {
-        rewritePage();
-      };
-
-      document.addEventListener("DOMContentLoaded", 
-        loadedHandler
-      , false);
-    </script>
+    <script type="text/javascript" src="options.js"></script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
