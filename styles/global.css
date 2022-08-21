@@ -48,6 +48,13 @@ html, body {
 
 }
 
+#card h2 {
+  font-size: 164%;
+  max-width: 286px;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
 .searchbox {
   font-size: 14px;
   font-family: var(--theme-font-main);
