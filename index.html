@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< Updated upstream
 <html>
 
 <head>
@@ -70,4 +71,110 @@
 
 </body>
 
+=======
+<html lang="en">  
+  <head>
+    <style type="text/css">html,body{background:black};</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="Handshake Domain market on Ethereum" />
+    <meta property="og:image" content="/preview.png" />
+    <link href="theme.css" rel="stylesheet" type="text/css" />
+    <link href="styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="styles/global.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#00ffb3">
+    <script type="text/javascript" src="settings.js"></script>
+    <title data-tld>{{tld}} Domains</title>
+  </head>
+  <body>  
+    <header>
+      <h1 data-tld class="title">
+        {{tld}} Domains
+      </h1>
+      <div class="subtitle">Decentralized domains on Ethereum</div>
+      <div class="subtitle">in a decentralized root zone</div>
+      <div class="subtitle">on Handshake</div>
+    </header>
+    <main>
+      <div class="search">
+        <div id="card" class="domain flashy">
+          <img id="nft" />
+          <span>
+            <h2 data-std="domainname" data-tld>{{tld}}</h2>
+          </span>
+        </div>
+        <span>
+          <input id="domainname" type="text" class="searchbox" placeholder="Enter domain" onchange="updateHandler()" onkeyup="updateHandler()" onkeydown="keyDownHandler()"> 
+          <div data-tld class="subtitle green">{{tld}}</div>
+        </span>
+      </div>
+      <div class="wrap-collabsible">
+        <input id="collapsible" class="toggle" type="checkbox"></input>
+        <label data-tld for="collapsible" class="lbl-toggle">
+          How to access {{tld}} sites
+        </label>
+        <div class="collapsible-content">
+          <div class="content-inner">
+            <div>
+              (1) <a target="_blanc" href="https://impervious.com/fingertip">Fingertip</a> Resolver, 
+              (2) <a target="_blanc" href="https://impervious.com/beacon">Beacon</a> Browser, 
+              (3) <a target="_blanc" href="https://hns.is/">Hns.is</a> Gateway,
+              (4) <a target="_blanc" href="https://github.com/handshake-org/hsd">HSD</a> Fullnode
+            </div>
+            <br/>
+          </div>
+        </div>
+      </div>
+      <div class="wrap-collabsible">
+        <input id="collapsible2" class="toggle" type="checkbox"></input>
+        <label data-tld for="collapsible2" class="lbl-toggle">
+          How to set up {{tld}} sites
+        </label>
+        <div class="collapsible-content">
+          <div class="content-inner">
+            <div>
+              (1) Handshake web hosting options include using a personal <a target="_blanc" href="https://github.com/pinheadmz/handout">webserver</a>, <a target="_blanc" href="https://www.instructables.com/Nginx-DANE-Hosting-on-Google-VM-for-Handshake/">NGINX + Google VM</a> or <a target="_blanc" href="https://docs.ipfs.tech/how-to/websites-on-ipfs/link-a-domain/#handshake">IPFS</a>.
+              <br/>
+              <br/>
+              <div>
+                then
+              </div>
+              <br/>
+              (2a) Connect your domain by adding name records directly on Ethereum
+              <br/>
+              <br/>
+              <div>
+                or
+              </div>
+              <br/>
+              (2b) Point NS records to a <a target="_blanc" href="https://hshub.io/">public</a> or <a target="_blanc" href="https://github.com/pinheadmz/handout">self-hosted</a> nameserver to add records off-chain
+            </div>
+            <br/>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Website by <a target="_blanc" href="https://theshake.xyz/">The Shake</a>
+      </p>
+      <!-- to do: set link dynamically -->
+      <br />
+      <p>
+        Check<a target="_blanc" href="https://niami/domain/xn--nft-9f63b">transfer state</a> to anyone-can-renew wallet
+      </p>
+      <!-- end -->
+      <div id="contact">
+        <a id="chat" target="_blanc">
+          <span>
+            Support
+            <img width="38" height="38" style="padding:0 0 0 0.375em" src="https://img.icons8.com/sf-regular/48/00ffb3/speech-bubble-with-dots.png" />
+          </span>
+      </a>
+      </div>
+    </footer>
+    <script type="text/javascript" src="scripts/main.js"></script>
+  </body>
+>>>>>>> Stashed changes
 </html>
