@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+:root {
+  --theme-font-main: 'Roboto Mono';
+  --theme-font-nft: 'Rubik Iso', cursive;
+  --theme-font-secondary: 'Monofett', cursive;
+
+  --theme-color-main: #00ffb3;
+  --theme-color-secondary: #ffffff;
+  --theme-color-contrast: ##242424;
+  
+  --theme-bg-main: #25293c;
+  --theme-bg-highlite: #00ffb350;
+  --theme-bg-contrast: #ffffff;
+  --theme-bg-subtitle: #ebf4ff50;
+
+}

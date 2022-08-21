@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Handshake Domain market on Ethereum" />
     <meta property="og:image" content="/preview.png" />
-    <link href="style/reset.css" rel="stylesheet" type="text/css" />
-    <link href="style/theme.css" rel="stylesheet" type="text/css" />
-    <link href="style/home.css" rel="stylesheet" type="text/css" />
-    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'> -->
+    <link href="theme.css" rel="stylesheet" type="text/css" />
+    <link href="styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="styles/global.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <meta name="theme-color" content="#00ffb3">
+    <script type="text/javascript" src="settings.js"></script>
     <title data-tld>{{tld}} Domains</title>
   </head>
   <body>  
@@ -26,7 +26,7 @@
     <main>
       <div class="search">
         <div id="card" class="domain flashy">
-          <img width="816" height="816" alt="Mostly transparent rainy city window gif." src="https://i.gifer.com/2zFX.gif" />
+          <img id="nft" />
           <span>
             <h2 data-std="domainname" data-tld>{{tld}}</h2>
           </span>
@@ -82,16 +82,25 @@
         </div>
       </div>
     </main>
-    <!-- <div class="footer"> -->
     <footer>
-      Website by <a href="https://theshake.xyz/" target="_blanc">The Shake</a>
+      <p>
+        Website by <a target="_blanc" href="https://theshake.xyz/">The Shake</a>
+      </p>
+      <!-- to do: set link dynamically -->
+      <br />
+      <p>
+        Check<a target="_blanc" href="https://niami/domain/xn--nft-9f63b">transfer state</a> to anyone-can-renew wallet
+      </p>
+      <!-- end -->
       <div id="contact">
-        <img src="">
-        <a id="chat" href="" target='_blanc'>Chat support</a>
+        <a id="chat" target="_blanc">
+          <span>
+            Support
+            <img width="38" height="38" style="padding:0 0 0 0.375em" src="https://img.icons8.com/sf-regular/48/00ffb3/speech-bubble-with-dots.png" />
+          </span>
+      </a>
       </div>
     </footer>
-
-    <script type="text/javascript" src="options.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
