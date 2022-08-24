@@ -38,14 +38,19 @@ html, body {
   overflow: hidden;
 }
 
-#card img {
+#nft-wrapper {
   position: absolute;
+  width: 316px;
+  height: 316px;
+  overflow: hidden;
+}
+
+#nft {
   z-index: 1;
   max-width: 316px;
   max-height: 316px;
   opacity: 0.23;
   transform: scale(2.24);
-
 }
 
 #card h2 {
