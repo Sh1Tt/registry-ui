@@ -8,7 +8,7 @@ window.settings = {
 		'linear-gradient(205deg, goldenrod 2%, rgb(255,52,255), rgb(55,152,255))'
 	],
 	nft: {
-		url: "https://i.gifer.com/2zFX.gif",
+		url: "https://mauricestolk.nl/api/registry/b7fe8a8d61.gif",
 		alt: "Mostly transparent rainy city window gif.",
 		w: 816,
 		h: 816
