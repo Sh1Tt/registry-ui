@@ -1,6 +1,3 @@
-This project is a fork of [theshake/domains:master](https://replit.com/@theshake/domains).
-All credit is theirs.
-
 ## Deploy your own marketplace
 ## 1 - clone repo
 ```

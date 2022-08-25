@@ -10,8 +10,8 @@ window.settings = {
 	nft: {
 		url: "https://mauricestolk.nl/api/registry/b7fe8a8d61.gif",
 		alt: "Mostly transparent rainy city window gif.",
-		w: 816,
-		h: 816
+		w: 316,
+		h: 316
 	},
 	support: {
 		chatname: `sh1tt`
