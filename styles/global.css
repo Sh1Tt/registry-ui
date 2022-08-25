@@ -53,7 +53,7 @@ html, body {
   transform: scale(2.24);
 }
 
-#card h2 {
+#card-title {
   font-size: 164%;
   max-width: 286px;
   text-overflow: ellipsis;
