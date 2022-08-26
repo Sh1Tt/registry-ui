@@ -1,8 +1,8 @@
 html, body {
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0);
-  color: white;
+  background-color: var(--theme-bg-main);
+  color: var(--theme-color-secondary);
   text-shadow: 
     0 1px 1px rgba(0,0,0,0.1), 
     1px 2px 2px rgba(0,0,0,0.1),
@@ -50,7 +50,7 @@ html, body {
   max-width: 316px;
   max-height: 316px;
   opacity: 0.23;
-  transform: scale(2.24);
+  /*transform: scale(2.24);*/
 }
 
 #card-title {
