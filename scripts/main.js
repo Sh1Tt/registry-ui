@@ -47,7 +47,8 @@ function loadNft() {
 
 function keydownHandler() {
   if (event.key === 'Enter') {
-    const domain = event.target.value + tld;
+    const escaped = (event.target.value).toLowerCase();
+    const domain = escaped + tld;
     const url = `https://impervious.domains/name/${domain}/register/`;
     location.target = '_blanc';
     location.href = url;
