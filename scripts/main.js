@@ -18,7 +18,7 @@ function setDomain(n) {
   showcase.innerText = n;
   if (window.eth != 'undefined') {
     const l = n.length - tld.length;
-    const i = l >= 5 ? 5 : l;
+    const i = l >= 5 ? 4 : l;
     const x = usd[i] / window.eth;
     price.innerText = `${x} ETH`;
   };
