@@ -16,7 +16,7 @@ function randomizeColor() {
 
 function setDomain(n) {
   showcase.innerText = n;
-  price.innerText = `${parseInt((settings.usd[n.length >= 5 ? 5 : n.length])*100)/100} ETH`;
+  price.innerText = n.length;
 };
 
 function updateHandler() {
