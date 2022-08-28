@@ -19,7 +19,7 @@ function setDomain(n) {
   if (window.eth != 'undefined') {
     const l = n.length - tld.length;
     const i = l >= 5 ? 5 : l;
-    const x = usd[i] / window.eth;
+    const x = usd[i];
     price.innerText = `${x} ETH`;
   };
 };
