@@ -18,15 +18,15 @@ function setDomain(n) {
   showcase.innerText = n;
   if (window.eth != 'undefined') {
     const l = n.length - tld.length;
-    console.log(l)
-    const i = l >= 5 ? 5 : l;
-    if (i === 0) {
-      price.innerText = "";
-    }
-    else {
+    console.log(l);
+    if (l >= 1) {
+      const i = (l >= 5 ? 5 : l) -1;
       const x = parseInt((usd[i] / window.eth) * 1_000) / 1_000;
       price.innerText = `${x} ETH`;
     }
+    else {
+      price.innerText = "";
+    };
   };
 };
 
