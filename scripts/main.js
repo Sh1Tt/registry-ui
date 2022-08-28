@@ -44,7 +44,8 @@ async function fetchExchangeData() {
   const xhr = new XMLHttpRequest();
 
   xhr.onload = function() {
-    window.eth = xhr.response;
+    const data = JSON.parse(xhr.response);
+    window.eth = data.ethereum.usd;
     console.log(window.eth)
   };
 
