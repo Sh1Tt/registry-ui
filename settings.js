@@ -16,11 +16,11 @@ window.settings = {
 	support: {
 		chatname: `sh1tt`
 	},
-	usd: { 
-		chars_1: 50,
-		chars_2: 38,
-		chars_3: 27,
-		chars_4: 17,
-		chars_5: 8
-	}
+	usd: [
+		50,
+		38,
+		27,
+		17,
+		8
+	]
 };

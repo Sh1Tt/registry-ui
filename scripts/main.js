@@ -20,7 +20,7 @@ function setDomain(n) {
     const l = n.length - tld.length;
     const i = l >= 5 ? 5 : l;
     const x = usd[i];
-    price.innerText = `${x} ETH`;
+    price.innerText = `$${x}`;
   };
 };
 
