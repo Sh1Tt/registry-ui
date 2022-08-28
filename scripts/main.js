@@ -53,6 +53,8 @@ async function fetchExchangeData() {
   };
 
   xhr.open(options.method, `${options.api.host}/${options.api.endpoint.eth}`);
+
+  xhr.send();
 };
 
 function writePageContents() {
