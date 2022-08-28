@@ -39,7 +39,8 @@ async function fetchExchangeData() {
   const xhr = new XMLHttpRequest();
 
   xhr.onload = function() {
-    window.eth = xhr.response.ethereum.usd;
+    window.eth = xhr.response;
+    console.log(window.eth)
   };
 
   xhr.onerror = function() { // only triggers if the request couldn't be made at all
