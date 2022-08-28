@@ -1,4 +1,4 @@
-const { tld, color, nft, support } = options = window.settings;
+const { tld, color, nft, support, usd } = options = window.settings;
 
 const card = document.body.querySelector(`#card`);
 const input = document.body.querySelector(`#domainname`);
@@ -16,7 +16,12 @@ function randomizeColor() {
 
 function setDomain(n) {
   showcase.innerText = n;
-  price.innerText = (n.length - tld.length);
+  if (window.eth != 'undefined') {
+    const l = n.length - tld.length;
+    const i = l >= 5 ? 5 : l;
+    const price = usd[i];
+    price.innerText = price;
+  };
 };
 
 function updateHandler() {
