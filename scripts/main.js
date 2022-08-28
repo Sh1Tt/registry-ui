@@ -16,7 +16,7 @@ function randomizeColor() {
 
 function setDomain(n) {
   showcase.innerText = n;
-  price.innerText = n.length;
+  price.innerText = (n.length - tld.length);
 };
 
 function updateHandler() {
