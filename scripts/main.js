@@ -3,6 +3,7 @@ const { tld, color, nft, support } = options = window.settings;
 const card = document.body.querySelector(`#card`);
 const input = document.body.querySelector(`#domainname`);
 const showcase = document.body.querySelector(`[data-std="domainname"]`);
+const price = document.body.querySelector(`[data-std="price"]`);
 
 function randomizeColor() {
   const randomGradient = options.color[Math.floor(Math.random()*options.color.length)];
@@ -15,6 +16,7 @@ function randomizeColor() {
 
 function setDomain(n) {
   showcase.innerText = n;
+  price.innerText = `${parseInt((settings.usd[n.length >= 5 ? 5 : n.length])*100)/100} ETH`;
 };
 
 function updateHandler() {
@@ -33,19 +35,17 @@ async function fetchExchangeData() {
       }
     }
   };
+  
   const xhr = new XMLHttpRequest();
+
   xhr.onload = function() {
-    console.log(xhr.response);
+    window.eth = xhr.response.ethereum.usd;
   };
+
   xhr.onerror = function() { // only triggers if the request couldn't be made at all
     alert(`Network Error`);
   };
-  // xhr.onprogress = function(event) { // triggers periodically
-    // event.loaded - how many bytes downloaded
-    // event.lengthComputable = true if the server sent Content-Length header
-    // event.total - total number of bytes (if lengthComputable)
-    // alert(`Received ${event.loaded} of ${event.total}`);
-  // };
+
   xhr.open(options.method, `${options.api.host}/${options.api.endpoint.eth}`);
   xhr.send();
 };
