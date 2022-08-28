@@ -60,6 +60,12 @@ html, body {
   word-break: break-word;
 }
 
+#card-price {
+  position: absolute;
+  right: .75em;
+  bottom: 1.25em;
+}
+
 .searchbox {
   font-size: 14px;
   font-family: var(--theme-font-main);
