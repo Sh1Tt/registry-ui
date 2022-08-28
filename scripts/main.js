@@ -23,7 +23,39 @@ function updateHandler() {
   randomizeColor();
 };
 
-function rewritePage() {
+async function fetchExchangeData() {
+  const options = {
+    method: "GET",
+    api: {
+      host: "https://api.coingecko.com",
+      endpoint: {
+        eth: "api/v3/simple/price?ids=ethereum&vs_currencies=usd"
+      }
+    }
+  };
+  
+  const xhr = new XMLHttpRequest();
+
+  xhr.onload = function() {
+    alert(`Loaded: ${xhr.status} ${xhr.response}`);
+
+  };
+  
+  xhr.onerror = function() { // only triggers if the request couldn't be made at all
+    alert(`Network Error`);
+  };
+  
+  xhr.onprogress = function(event) { // triggers periodically
+    // event.loaded - how many bytes downloaded
+    // event.lengthComputable = true if the server sent Content-Length header
+    // event.total - total number of bytes (if lengthComputable)
+    alert(`Received ${event.loaded} of ${event.total}`);
+  };
+
+  xhr.open(options.method, `${options.api.host}/${options.api.endpoint.eth}`);
+};
+
+function writePageContents() {
   const allElements = Array.from(document.querySelectorAll(`[data-tld]`));
   const chatLink = `https://hns.chat/#message:${support.chatname}`;
   const verifyLink = `https://niami/domain/${tld.replace(".","")}`;
@@ -57,7 +89,8 @@ function keydownHandler() {
 
 function loadedHandler() {
   loadNft();
-  rewritePage();
+  writePageContents();
+  fetchExchangeData();
 };
 
 document.addEventListener("DOMContentLoaded", 
