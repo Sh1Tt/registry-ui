@@ -25,7 +25,7 @@ function setDomain(n) {
     if (l >= 1) {
       const i = (l >= 5 ? 5 : l) -1;
       const x = (usd[i] / window.eth).toFixed(3);
-      price.innerHTML = `<img style="padding:0 .25em;" src="${ETH}" alt="eth crypto logo" width="24" height="24" /> ${x}`;
+      price.innerHTML = `<img style="padding:0 .25em;" src="`${ETH}`" alt="eth crypto logo" width="24" height="24" /> ${x}`;
     }
     else {
       price.innerText = "";
