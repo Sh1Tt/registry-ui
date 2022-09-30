@@ -1,7 +1,7 @@
 /* width & round */   
 ::-webkit-scrollbar, 
 iframe::-webkit-scrollbar {     
-	width: 4px;
+	width: var(--scroll-width);
 	border-radius: 50%;
 }    
 /* Track */   
