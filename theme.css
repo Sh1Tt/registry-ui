@@ -15,4 +15,7 @@
   --theme-bg-contrast: #ffffff;
   --theme-bg-subtitle: #ebf4ff50;
 
+  --scroll-track: rgba(37, 41, 60, 1);
+  --scroll-thumb: rgba(34, 39, 46, 1);
+  --scroll-hover: rgba(20, 23, 33, 1);
 }
