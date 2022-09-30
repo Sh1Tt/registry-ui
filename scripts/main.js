@@ -64,16 +64,14 @@ async function fetchExchangeData() {
 };
 
 function writePageContents() {
-  const allElements = Array.from(document.querySelectorAll(`[data-tld]`));
+  const tld_elements = Array.from(document.querySelectorAll(`[data-tld]`));
   const chatLink = `https://hns.chat/#message:${support.chatname}`;
-  const verifyLink = `https://niami/domain/${tld.replace(".","")}`;
-  allElements.forEach(element => {
+  tld_elements.forEach(element => {
     const t = element.innerText;
     const r = t.replace("{{tld}}",tld);
     element.innerText = r;
   });
   document.body.querySelector(`#chat`).href = chatLink;
-  document.body.querySelector(`#verify-renew`).href = verifyLink;
 };
 
 function loadNft() {
