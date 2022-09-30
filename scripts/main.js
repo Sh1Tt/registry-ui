@@ -5,6 +5,8 @@ const input = document.body.querySelector(`#domainname`);
 const showcase = document.body.querySelector(`[data-std="domainname"]`);
 const price = document.body.querySelector(`[data-std="price"]`);
 
+const registryUrl = domain => `https://impervious.domains/name/${domain}/register/`;
+
 function randomizeColor() {
   const randomGradient = options.color[Math.floor(Math.random()*options.color.length)];
   card.classList.add("fader");
@@ -17,7 +19,8 @@ function randomizeColor() {
 function setDomain(n) {
   showcase.innerText = n;
   if (window.eth != 'undefined') {
-    const l = n.length - tld.length;
+    const l = [...n].length - tld.length;
+    // const l = n.length - tld.length;
     console.log(l);
     if (l >= 1) {
       const i = (l >= 5 ? 5 : l) -1;
@@ -74,29 +77,29 @@ function writePageContents() {
   document.body.querySelector(`#chat`).href = chatLink;
 };
 
-function loadNft() {
-  const image = document.body.querySelector(`#nft`);
+function setNft() {
+  const i = document.body.querySelector(`#nft`);
   const { url, alt, w, h } = nft;
-  image.alt = alt;
-  image.width = w;
-  image.height = h;
-  image.src = url;
+  i.alt = alt;
+  i.width = w;
+  i.height = h;
+  i.src = url;
 };
 
 function keydownHandler() {
   if (event.key === 'Enter') {
     const escaped = (event.target.value).toLowerCase();
     const domain = escaped + tld;
-    const url = `https://impervious.domains/name/${domain}/register/`;
+    const url = registryUrl(domain);
     location.target = '_blanc';
     location.href = url;
   };
 };
 
 function loadedHandler() {
-  loadNft();
-  writePageContents();
   fetchExchangeData();
+  setNft();
+  writePageContents();
 };
 
 document.addEventListener("DOMContentLoaded", 
