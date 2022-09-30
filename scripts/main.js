@@ -19,7 +19,7 @@ function randomizeColor() {
 function setDomain(n) {
   showcase.innerText = n;
   if (window.eth != 'undefined') {
-    const l = [...(n.replace(tld,``))].length;
+    const l = [...(n.replace(tld,``).split()].length;
     // const l = n.length - tld.length;
     console.log(l);
     if (l >= 1) {
