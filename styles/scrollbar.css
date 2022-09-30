@@ -1,0 +1,21 @@
+/* width & round */   
+::-webkit-scrollbar, 
+iframe::-webkit-scrollbar {     
+	width: 4px;
+	border-radius: 50%;
+}    
+/* Track */   
+::-webkit-scrollbar-track, 
+iframe::-webkit-scrollbar-track {     
+	background: rgba(--scroll-track);
+}    
+/* Handle */   
+::-webkit-scrollbar-thumb, 
+iframe::-webkit-scrollbar-thumb {     
+	background: var(--scroll-thumb);
+}    
+/* Handle on hover */   
+::-webkit-scrollbar-thumb:hover, 
+iframe::-webkit-scrollbar-thumb:hover {     
+	background: var(--scroll-hover);
+}
